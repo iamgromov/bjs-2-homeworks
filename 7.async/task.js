@@ -32,7 +32,7 @@ class AlarmClock {
 
         function asyncFunction() {
             this.alarmCollection.forEach(elem => {
-                if (elem.time === this.getCurrentFormattedTime()) {
+                if (elem.time === this.getCurrentFormattedTime() && elem.canCall === true) {
                     elem.canCall = false;
                     elem.callback();
                 }
